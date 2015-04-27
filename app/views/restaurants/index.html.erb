@@ -1,4 +1,6 @@
 <h1>All Restaurants</h1>
+
+<p><%= link_to 'Add New Restaurant', '/restaurants/new' %></p>
 <p>Showing all restaurants</p>
 <% @restaurants.each do |restaurant| %>
 <p><%= link_to restaurant.name, "/restaurants/#{restaurant.id}" %></p>

@@ -4,7 +4,7 @@
 
   <% @restaurant.reservations.each do |reservation| %>
     <p>
-      <%= reservation.date %>
+      <p>Reservation at: <%= reservation.date %>
       <%= reservation.time %>
       <%= reservation.party %>
       <br>
