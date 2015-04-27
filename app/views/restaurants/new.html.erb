@@ -19,6 +19,13 @@
     <%= f.time_select :closing, ampm: true %>
   </p>
   <p>
+    <%= f.label :capacity %><br>
+    <%= f.number_field :capacity %>
+  </p>
+
+
+
+  <p>
     <%= f.submit "Save" %>
   </p>
 <% end %>

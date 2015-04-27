@@ -35,7 +35,7 @@
 
     <div class="field">
       <%= f.label :date %><br />
-      <%= f.datetime_select :date, start_hour: @restaurant.opening, end_hour: @restaurant.closing %>
+      <%= f.datetime_select :date, start_hour: @restaurant.opening.hour, end_hour: @restaurant.closing.hour %>
     </div>
     <div class="field">
       <%= f.label :party %><br />
