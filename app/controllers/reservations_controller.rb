@@ -23,7 +23,7 @@ class ReservationsController < ApplicationController
     if @reservation.save
       redirect_to restaurants_path, notice: 'Reservation created!'
     else
-      render 'restaurants/show'
+      redirect_to restaurant_path(@restaurant), alert: 'Restaurant is at capacity at that time.'
     end
   end
 
