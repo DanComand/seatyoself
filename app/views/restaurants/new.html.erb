@@ -11,12 +11,12 @@
   </p>
   <p>
     <%= f.label :opening %><br>
-    <%= f.text_field :opening %>
+    <%= f.time_select :opening, ampm: true %>
   </p>
 
   <p>
     <%= f.label :closing %><br>
-    <%= f.text_field :closing %>
+    <%= f.time_select :closing, ampm: true %>
   </p>
   <p>
     <%= f.submit "Save" %>

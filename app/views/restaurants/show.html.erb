@@ -7,11 +7,11 @@
   <% @restaurant.reservations.each do |reservation| %>
     <p>
       <p>Reservation is on:<%= reservation.date %>
-      at <%= reservation.time %>
+      at <%= reservation.date %>
       for <%= reservation.party %> people</p>
       <br>
       <% if reservation.user != nil %>
-        <em> by <%= reservation.user.email %></em>
+        <em> by <%= reservation.user.firstname %></em>
         Created at: <%= reservation.created_at %>
       <% end %>
     </p>
@@ -35,14 +35,8 @@
 
     <div class="field">
       <%= f.label :date %><br />
-      <%= f.text_area :date %>
+      <%= f.datetime_select :date, start_hour: @restaurant.opening, end_hour: @restaurant.closing %>
     </div>
-
-    <div class="field">
-      <%= f.label :time %><br />
-      <%= f.text_area :time %>
-    </div>
-
     <div class="field">
       <%= f.label :party %><br />
       <%= f.text_area :party %>
