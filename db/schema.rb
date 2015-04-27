@@ -11,20 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150426221609) do
+ActiveRecord::Schema.define(version: 20150423212809) do
 
   create_table "reservations", force: :cascade do |t|
     t.date     "date"
-    t.time     "time"
+    t.integer  "time"
     t.integer  "party"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "restaurant_id"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "restaurants", force: :cascade do |t|
     t.string   "name"
     t.string   "url"
-    t.string   "hours"
+    t.integer  "opening"
+    t.integer  "closing"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -33,9 +36,9 @@ ActiveRecord::Schema.define(version: 20150426221609) do
     t.string   "firstname"
     t.string   "lastname"
     t.string   "email"
+    t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.string   "password_digest"
   end
 
 end
